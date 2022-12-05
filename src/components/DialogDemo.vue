@@ -1,10 +1,16 @@
 <template>
-<div>DialogDemo</div>
+<h3>Dialog示例</h3>
+  <h1>示例1</h1>
+  <Dialog></Dialog>
 </template>
 
-<script>
+<script lang="ts">
+import Dialog from '../lib/Dialog.vue'
 export default {
-  name: "DialogDemo"
+  name: "DialogDemo",
+  components: {
+    Dialog
+  }
 }
 </script>
 
