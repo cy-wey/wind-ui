@@ -1,16 +1,25 @@
 <template>
-<h3>Dialog示例</h3>
+  <h3>Dialog示例</h3>
   <h1>示例1</h1>
   <Button @click="toggle">toggle</Button>
   <Dialog v-model:visible="x" :close-onclick-overlay="false"
-  :ok="f1" :cancel="f2"
-  ></Dialog>
+          :ok="f1" :cancel="f2"
+  >
+    <template v-slot:content>
+      <div>hi</div>
+      <div>你好</div>
+    </template>
+    <template v-slot:title>
+      <strong>提示</strong>
+    </template>
+  </Dialog>
 </template>
 
 <script lang="ts">
 import Button from '../lib/Button.vue';
 import Dialog from '../lib/Dialog.vue';
 import {ref} from 'vue'
+
 export default {
   name: "DialogDemo",
   components: {
@@ -27,7 +36,7 @@ export default {
     }
     const f2 = () => {
     }
-    return {x, toggle,f1,f2}
+    return {x, toggle, f1, f2}
   }
 }
 </script>
