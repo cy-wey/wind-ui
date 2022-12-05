@@ -1,26 +1,27 @@
 <template>
   <template v-if="visible">
-    <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="gulu-dialog-wrapper">
-      <div class="gulu-dialog">
-        <header>
-          <slot name="title"></slot>
-          <span @click="close" class="gulu-dialog-close"></span></header>
-        <main>
-          <slot name="content"></slot>
-        </main>
-        <footer>
-          <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+    <Teleport to="body">
+      <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="gulu-dialog-wrapper">
+        <div class="gulu-dialog">
+          <header>
+            <slot name="title"></slot>
+            <span @click="close" class="gulu-dialog-close"></span></header>
+          <main>
+            <slot name="content"></slot>
+          </main>
+          <footer>
+            <Button level="main" @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
 <script lang="ts">
 import Button from './Button.vue'
-
 export default {
   props: {
     title: {
@@ -62,7 +63,7 @@ export default {
       }
     }
     const cancel = () => {
-      context.emit('cancel')
+      props.cancel?.()
       close()
     }
     return {close, onClickOverlay, ok, cancel}
@@ -116,6 +117,9 @@ $border-color: #d9d9d9;
     border-top: 1px solid $border-color;
     padding: 12px 16px;
     text-align: right;
+     button {
+      margin-left: 16px;
+    }
   }
 
   &-close {
