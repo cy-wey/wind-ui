@@ -4,16 +4,25 @@
       <use xlink:href="#icon-star"></use>
     </svg></div>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+      <router-link to="/doc">文档</router-link>
+      </li>
     </ul>
-    <span class="toggleAside"  @click="toggleMenu"></span>
+    <svg v-if="toggleMenuBottonVisible" class="toggleAside" @click="toggleMenu">
+      <use xlink:href="#icon-menu"></use>
+    </svg>
   </div>
 </template>
 
 <script lang="ts">
 import {inject, Ref} from 'vue'
 export default {
+  props: {
+    toggleMenuBottonVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible')
     const toggleMenu = () => {
@@ -56,14 +65,14 @@ export default {
   }
 
   > .toggleAside {
-    width: 24px;
-    height: 24px;
-    background: red;
+    width: 32px;
+    height: 32px;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
     display: none;
+    background: fade-out(black,0.9);
   }
 
   @media (max-width: 500px) {
