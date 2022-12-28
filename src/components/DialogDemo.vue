@@ -50,7 +50,7 @@ export default {
         content: '你好',
         ok() {
           console.log('ok');
-          return false
+          return true
         },
         cancel() {
           console.log('cancel');
