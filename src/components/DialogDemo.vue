@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Dialog 示例</h1>
+    <div>Dialog示例</div>
     <Demo :component="Dialog1Demo"/>
     <Demo :component="Dialog2Demo"/>
   </div>
