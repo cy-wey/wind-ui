@@ -8,7 +8,8 @@
     </router-link>
     <ul class="menu">
       <li>
-        <router-link to="/doc/intro">文档</router-link>
+        <router-link to="/" v-if="toggleMenuBottonVisible">首页</router-link>
+        <router-link to="/doc/intro" v-else>文档</router-link>
       </li>
     </ul>
     <svg v-if="toggleMenuBottonVisible" class="toggleAside" @click="toggleMenu">
@@ -73,7 +74,12 @@ export default {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
-
+    a {
+      text-decoration: none;
+      &:hover {
+        color: #18acff;
+      }
+    }
     > li {
       margin: 0 1em;
     }

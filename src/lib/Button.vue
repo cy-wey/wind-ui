@@ -74,6 +74,7 @@ $grey: #ccc;
   box-shadow: 0 1px 0 fade-out(black, 0.95) & + & {
     margin-left: 8px;
   }
+
   & + & {
     margin-left: 8px;
   }
@@ -91,20 +92,24 @@ $grey: #ccc;
       color: $blue;
       border-color: $blue;
     }
+
     &.gulu-size-big {
       font-size: 24px;
       height: 48px;
       padding: 0 16px;
     }
+
     &.gulu-size-small {
       font-size: 12px;
       height: 20px;
       padding: 0 4px;
     }
+
     &.gulu-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
+
       &:hover,
       &:focus {
         background: darken($blue, 10%);
@@ -116,16 +121,19 @@ $grey: #ccc;
       background: $red;
       color: white;
       border-color: $red;
+
       &:hover,
       &:focus {
         background: darken($red, 10%);
         border-color: darken($red, 10%);
       }
     }
+
     &[disabled] {
       cursor: not-allowed;
       color: #666;
       background: #grey;
+
       &:hover,
       &:focus {
         background: #blue;
@@ -133,15 +141,18 @@ $grey: #ccc;
       }
     }
   }
+
   &.gulu-theme-link {
     color: $blue;
     background: none;
     border: none;
+
     &.gulu-size-big {
       font-size: 24px;
       height: 48px;
       padding: 0 16px;
     }
+
     &.gulu-size-small {
       font-size: 12px;
       height: 20px;
@@ -152,20 +163,24 @@ $grey: #ccc;
       color: $red;
     }
   }
+
   &.gulu-theme-text {
     color: black;
     background: none;
     border: none;
+
     &.gulu-size-big {
       font-size: 24px;
       height: 48px;
       padding: 0 16px;
     }
+
     &.gulu-size-small {
       font-size: 12px;
       height: 20px;
       padding: 0 4px;
     }
+
     &.gulu-level-main {
       color: $blue;
     }
@@ -180,11 +195,13 @@ $grey: #ccc;
       cursor: not-allowed;
       color: #666;
     }
+
     &:hover,
     &:focus {
       border: none;
     }
   }
+
   > .gulu-loadingIndicator {
     width: 14px;
     height: 14px;
