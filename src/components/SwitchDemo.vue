@@ -10,7 +10,7 @@
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>{{ Switch1Demo.__sourceCode }}</pre>
+        <pre class="language-html" v-html="Prism.highlight(Switch1Demo.__sourceCode,Prism.languages.html)"/>
       </div>
     </div>
 
@@ -23,19 +23,22 @@
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>{{ Switch2Demo.__sourceCode }}</pre>
+        <pre class="language-html" v-html="Prism.highlight(Switch2Demo.__sourceCode,Prism.languages.html)"/>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Button from '../lib/Button.vue'
-import Switch2Demo from './Switch2.demo.vue'
-import Switch1Demo from './Switch1.demo.vue'
+import Button from '../lib/Button.vue';
+import Switch2Demo from './Switch2.demo.vue';
+import Switch1Demo from './Switch1.demo.vue';
 import Switch from "../lib/Switch.vue";
-import {ref} from 'vue'
+import {ref} from 'vue';
+import 'prismjs';
+import 'prismjs/themes/prism.css';
 
+const Prism = (window as any).Prism
 export default {
   name: "SwitchDemo",
   components: {
@@ -46,7 +49,8 @@ export default {
     return {
       bool,
       Switch1Demo,
-      Switch2Demo
+      Switch2Demo,
+      Prism
     }
   }
 }
@@ -58,7 +62,7 @@ $border-color: #d9d9d9;
   border: 1px solid $border-color;
   margin: 16px 0 32px;
 
-  >h2 {
+  > h2 {
     font-size: 20px;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
@@ -79,7 +83,7 @@ $border-color: #d9d9d9;
 
     > pre {
       line-height: 1.1;
-      font-family: Cosolas, 'Courier New', Courier,monospace;
+      font-family: Cosolas, 'Courier New', Courier, monospace;
       margin: 0;
     }
   }
