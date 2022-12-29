@@ -31,7 +31,6 @@
             <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
         </ol>
-        </ol>
 
       </aside>
       <main>

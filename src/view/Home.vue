@@ -50,6 +50,7 @@ export default {
 <style lang="scss" scoped>
 $blue: #2e46b8;
 $border-radius: 4px;
+
 .topNavAndBanner {
   background: linear-gradient(180deg, rgba(228, 231, 236, 1) 0%, rgba(248, 246, 250, 1) 50%, rgba(243, 241, 250, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
@@ -63,6 +64,7 @@ $border-radius: 4px;
 .features {
   margin: 64px auto;
   width: 400px;
+
 
   @media (min-width: 800px) {
     width: 800px;
