@@ -1,11 +1,14 @@
 <template>
   <div class="topnav">
-    <div class="logo"><svg class="icon">
-      <use xlink:href="#icon-star"></use>
-    </svg></div>
+    <router-link to="/" class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-sailboat"></use>
+      </svg>
+      <span>Wind UI</span>
+    </router-link>
     <ul class="menu">
       <li>
-      <router-link to="/doc/intro">文档</router-link>
+        <router-link to="/doc/intro">文档</router-link>
       </li>
     </ul>
     <svg v-if="toggleMenuBottonVisible" class="toggleAside" @click="toggleMenu">
@@ -16,6 +19,7 @@
 
 <script lang="ts">
 import {inject, Ref} from 'vue'
+
 export default {
   props: {
     toggleMenuBottonVisible: {
@@ -36,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 .topnav {
   display: flex;
-  padding: 16px;
+  padding: 10px 16px;
   position: fixed;
   top: 0;
   left: 0;
@@ -44,13 +48,24 @@ export default {
   z-index: 10;
   justify-content: center;
   align-items: center;
-
+  box-shadow: 0px 0px 3px #bbb;
+  background: white;
+  > a {
+    text-decoration: none;
+  }
   > .logo {
-    max-width: 6em;
+    max-width: 16em;
     margin-right: auto;
+
     > svg {
       width: 32px;
       height: 32px;
+      color: #2e46b8;
+    }
+    > span {
+      margin-left: 10px;
+      font-size: 26px;
+
     }
   }
 
@@ -72,7 +87,7 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     display: none;
-    background: fade-out(black,0.9);
+    background: fade-out(black, 0.9);
   }
 
   @media (max-width: 500px) {

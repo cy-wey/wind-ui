@@ -3,7 +3,7 @@
     <div class="topNavAndBanner">
       <Topnav/>
       <div class="banner">
-        <h1>轱辘UI</h1>
+        <h1>Wind UI</h1>
         <h2>一个厉害的 UI 框架</h2>
         <p class="action">
           <a href="https://github.com/cy-wey">GitHub</a>
@@ -35,9 +35,6 @@
           <p>每个组件的源代码都极其简洁</p>
         </li>
       </ul>
-
-
-
     </div>
   </div>
 </template>
@@ -56,6 +53,11 @@ $border-radius: 4px;
 .topNavAndBanner {
   background: linear-gradient(180deg, rgba(228, 231, 236, 1) 0%, rgba(248, 246, 250, 1) 50%, rgba(243, 241, 250, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
+}
+
+.topnav {
+  background: none;
+  box-shadow: none;
 }
 
 .features {

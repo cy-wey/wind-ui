@@ -60,7 +60,6 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
-
   > .nav {
     flex-shrink: 0;
   }
@@ -89,16 +88,20 @@ export default {
 }
 
 aside {
-  background: lightblue;
+
+  background: #ffffff;
   width: 150px;
   padding: 16px 0;
   position: fixed;
-  top: 0;
+  top: 80px;
   left: 0;
-  padding-top: 70px;
+  padding-top: 0px;
   height: 100%;
+  border-right: 1px solid #e8e8e8;
+  z-index: 6;
 
   > h2 {
+    margin-top: 4px;
     margin-bottom: 4px;
     padding: 0 16px;
   }
@@ -111,7 +114,9 @@ aside {
         text-decoration: none;
       }
       .router-link-active {
-        background: white;
+        background: #e6f7ff;
+        color: #18acff;
+        border-right: 2px solid #1890ff;
       }
     }
   }
