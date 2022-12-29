@@ -59,6 +59,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
   > .nav {
     flex-shrink: 0;
   }
@@ -112,6 +113,7 @@ aside {
         padding: 4px 16px;
         text-decoration: none;
       }
+
       .router-link-active {
         background: #e6f7ff;
         color: #18acff;
