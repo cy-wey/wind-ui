@@ -7,7 +7,7 @@
         <h2>一个厉害的 UI 框架</h2>
         <p class="action">
           <a href="https://github.com/cy-wey">GitHub</a>
-          <router-link to="/doc">开始</router-link>
+          <router-link to="/doc/intro">开始</router-link>
         </p>
       </div>
     </div>
