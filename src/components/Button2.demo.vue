@@ -1,5 +1,5 @@
 <demo>
-支持size
+支持 size
 </demo>
 <template>
   <div>

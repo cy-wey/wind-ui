@@ -1,5 +1,5 @@
 <demo>
-支持level
+支持 level
 </demo>
 <template>
   <div>
