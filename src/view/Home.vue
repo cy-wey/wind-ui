@@ -64,7 +64,6 @@ $border-radius: 4px;
 .features {
   margin: 64px auto;
   padding: 0 16px;
-
   @media (min-width: 800px) {
     width: 800px;
     > ul {
@@ -88,7 +87,6 @@ $border-radius: 4px;
     flex-wrap: wrap;
 
     > li {
-      width: 400px;
       margin: 16px 0;
       display: grid;
       justify-content: start;
