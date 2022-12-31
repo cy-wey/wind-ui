@@ -1,6 +1,5 @@
 <template>
   <div>
-    Tabs组件
     <div class=" gulu-tabs">
       <div class=" gulu-tabs-nav" ref="container">
         <div class=" gulu-tabs-nav-item" v-for="(t,index) in titles" :key="index"
