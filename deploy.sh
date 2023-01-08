@@ -7,8 +7,8 @@ git commit -m "update" &&
 git branch -M main &&
 git remote add origin git@github.com:cy-wey/wind-ui-website.git &&
 git push -f -u origin main &&
-git branch -M master &&
+git branch -M main &&
 git remote add origin git@github.com:cy-wey/wind-ui-website.git &&
-git push -f -u origin master &&
+git push -f -u origin main &&
 cd -
 echo https://cy-wey.github.io/wind-ui-website/index.html
